@@ -31,4 +31,16 @@ public class BankAccount {
     }
   }
 
+  public boolean withdraw(double amount) {
+    if (balance < amount || amount < 0) {
+      return false;
+    } else {
+      balance -= amount;
+      return true;
+    }
+  }
+
+  public String toString() {
+    return (String.valueOf(accountID) + "\t" + String.valueOf(balance));
+  }
 }
