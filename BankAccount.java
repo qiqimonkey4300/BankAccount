@@ -5,7 +5,7 @@ public class BankAccount {
   private String password;
 
   public BankAccount(int a, String p) {
-    balance = 0;
+    balance = 0.0;
     accountID = a;
     password = p;
   }
@@ -18,5 +18,17 @@ public class BankAccount {
     return accountID;
   }
 
+  public void setPassword(String p) {
+    password = p;
+  }
+
+  public boolean deposit(double amount) {
+    if (amount >= 0) {
+      balance += amount;
+      return true;
+    } else {
+      return false;
+    }
+  }
 
 }
